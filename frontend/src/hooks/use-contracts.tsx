@@ -12,7 +12,7 @@ export function useContracts() {
   const { toast } = useToast();
 
   const handleContractCall = useCallback(
-    async <T>(
+    async <T,>(
       operation: () => Promise<T>,
       successMessage?: string,
       errorMessage?: string
@@ -66,6 +66,7 @@ export function useContracts() {
       );
     },
     [address, signTransaction, handleContractCall]
+    [address, signTransaction, handleContractCall]
   );
 
   const buyTokens = useCallback(
@@ -81,6 +82,7 @@ export function useContracts() {
         'Failed to buy tokens'
       );
     },
+    [address, signTransaction, handleContractCall]
     [address, signTransaction, handleContractCall]
   );
 
@@ -98,6 +100,7 @@ export function useContracts() {
       );
     },
     [address, signTransaction, handleContractCall]
+    [address, signTransaction, handleContractCall]
   );
 
   const claimWinnings = useCallback(
@@ -108,6 +111,7 @@ export function useContracts() {
         'Failed to claim winnings'
       );
     },
+    [address, signTransaction, handleContractCall]
     [address, signTransaction, handleContractCall]
   );
 
@@ -126,6 +130,7 @@ export function useContracts() {
       );
     },
     [address, signTransaction, handleContractCall]
+    [address, signTransaction, handleContractCall]
   );
 
   const addLiquidity = useCallback(
@@ -142,6 +147,7 @@ export function useContracts() {
       );
     },
     [address, signTransaction, handleContractCall]
+    [address, signTransaction, handleContractCall]
   );
 
   // Governance operations
@@ -154,6 +160,7 @@ export function useContracts() {
       );
     },
     [address, signTransaction, handleContractCall]
+    [address, signTransaction, handleContractCall]
   );
 
   const voteOnProposal = useCallback(
@@ -164,6 +171,7 @@ export function useContracts() {
         'Failed to submit vote'
       );
     },
+    [address, signTransaction, handleContractCall]
     [address, signTransaction, handleContractCall]
   );
 
